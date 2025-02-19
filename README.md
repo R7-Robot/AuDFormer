@@ -35,6 +35,20 @@ python main.py --eval
 ```
 
 (The code was tested in Ubuntu 20.04 with Python 3.8.)
+
+### Recommended hyper-parameters on each dataset
+
+|Parameter Name|Coswara|IPVS|Sound-Dr|PC-GITA|SVD|
+| :---: | :---: | :---: | :---: | :---: | :---: |
+|Batch Size|32|16|16|16|16|
+|Initial Learning Rate|1e-3|1e-3|1e-3|1e-4|1e-3|
+|Optimizer|SGD|SGD|SGD|SGD|SGD|
+|Transformer Hidden Unit Size|40|40|40|40|40|
+|Crossmodal Attention Heads|5|5|5|3|3|
+|Crossmodal Attention Block Dropout|0.1|0.1|0.1|0.1|0.1|
+|Output Dropout|0.1|0.1|0.1|0.1|0.1|
+|Epochs|60|100|60|80|80|
+
 ### Change model
 We provide 5 models in code to correspond to the 5 data number of datasets as COSWARA, IPVS, PC-GITA, Sound-Dr and SVD. You should add or remove some modalities in code, if you want to use more or less modalities by AuD-Former.
 #### How change the model
